@@ -124,7 +124,7 @@ int main() {
                 end_msg = "Ai castigat! 🎉"; // test local
                 draw_end_screen(end_msg);
                 ch = getch();
-                if (ch == 'q') goto exit_program;
+                if (ch == 'q') gui_close();
                 // resetează tabla după ENTER
                 for (int i = 0; i < SIZE; i++)
                     for (int j = 0; j < SIZE; j++)
@@ -138,7 +138,6 @@ int main() {
             draw_board(board, cursor_y, cursor_x, player_symbol, opponent_symbol);
     }
 
-exit_program:
-    gui_close();
+
     return 0;
 }
